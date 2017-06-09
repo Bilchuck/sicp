@@ -2,11 +2,7 @@
   ;  (let loop ((a 1) (n))
   ;      (if (even))))
 
-(define (even? n) 
-    (cond 
-    ((= n 0) #t)
-    ((= n 1) #f)
-    (else (even? (- n 2)))))
+(define (even? n) (= (remainder n 2) 0))
 
-(even 13)
-(even 14)
+(even? 13)
+(even? 14)
